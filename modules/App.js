@@ -1,9 +1,15 @@
 import React from 'react'
+import Albums from './Albums'
 
 export default React.createClass({
   render() {
     return (
-      <h1 className="heading">Hello!</h1>
+      <main>
+        <h1 className="heading">Photo Albums</h1>
+        <div>
+          <Albums/>
+        </div>
+      </main>
     )
   }
 })

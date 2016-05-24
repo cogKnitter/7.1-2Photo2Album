@@ -113,11 +113,13 @@ export default React.createClass({
     )
   },
   onHandleClickChangeAlbum(e) {
+    console.log("handling", e.target)
     this.setState(
       {
-        currentAlbum: this.props.albums[e.currentTarget.id]
+        currentAlbum: this.props.albums[e.target.id]
       }
     )
+    e.preventDefault();
   },
 
   render() {
@@ -125,8 +127,8 @@ export default React.createClass({
       <div>
         <section className="albums__links--list">
           {this.props.albums.map(function(album, i){
-            return <h2  className="albums__links">
-              <Link key={i} onClick={this.onHandleClickChangeAlbum} to={`/albums/${album.album_name}`}>{album.album_name}
+            return <h2 key={i}  className="albums__links">
+              <Link  id={album.id} onClick={this.onHandleClickChangeAlbum} to={`/albums/${album.album_name}`}>{album.album_name}
               </Link>
             </h2>
           },this)}

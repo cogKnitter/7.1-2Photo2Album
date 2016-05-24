@@ -8,6 +8,7 @@ export default React.createClass({
       albums: [
         {
           album_name: "one",
+          id: 0,
           images: [
             {
               image_src: "books.jpeg",
@@ -23,6 +24,7 @@ export default React.createClass({
         },
         {
           album_name: "two",
+          id: 1,
           images: [
             {
               image_src: "flower.jpeg",
@@ -38,6 +40,7 @@ export default React.createClass({
         },
         {
           album_name: "three",
+          id: 2,
           images: [
             {
               image_src: "jellyfish.jpeg",
@@ -53,6 +56,7 @@ export default React.createClass({
         },
         {
           album_name: "four",
+          id: 3,
           images: [
             {
               image_src: "oceancliffs.jpeg",
@@ -68,6 +72,7 @@ export default React.createClass({
         },
         {
           album_name: "five",
+          id: 4,
           images: [
             {
               image_src: "river.jpeg",
@@ -83,6 +88,7 @@ export default React.createClass({
         },
         {
           album_name: "six",
+          id: 5,
           images: [
             {
               image_src: "succulent.jpeg",

@@ -5,7 +5,7 @@ export default React.createClass({
   render() {
     return (
       <main>
-        <h1 className="heading">Photo Albums</h1>
+        <h1 className="heading">Photo Albums Demo</h1>
         <div>
           <Albums/>
         </div>

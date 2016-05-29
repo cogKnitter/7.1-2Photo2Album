@@ -7,12 +7,12 @@ export default React.createClass({
      return {
       albums: [
         {
-          album_name: "one",
+          album_name: "Space",
           id: 0,
           images: [
             {
-              image_src: "books.jpeg",
-              image_title: "books"
+              image_src: "nasa.jpeg",
+              image_title: "outer space"
             },{
               image_src: "coast.jpeg",
               image_title: "coast"
@@ -23,47 +23,15 @@ export default React.createClass({
           ]
         },
         {
-          album_name: "two",
+          album_name: "Plants",
           id: 1,
           images: [
             {
               image_src: "flower.jpeg",
               image_title: "flower"
             },{
-              image_src: "greenstars.jpeg",
-              image_title: "green stars"
-            },{
-              image_src: "hills.jpeg",
-              image_title: "hills"
-            }
-          ]
-        },
-        {
-          album_name: "three",
-          id: 2,
-          images: [
-            {
-              image_src: "jellyfish.jpeg",
-              image_title: "jellyfish"
-            },{
-              image_src: "mountain.jpeg",
-              image_title: "mountain"
-            },{
-              image_src: "nasa.jpeg",
-              image_title: "outer space"
-            }
-          ]
-        },
-        {
-          album_name: "four",
-          id: 3,
-          images: [
-            {
-              image_src: "oceancliffs.jpeg",
-              image_title: "cliffs near ocean"
-            },{
-              image_src: "oceanclouds.jpeg",
-              image_title: "clouds hovering over ocean"
+              image_src: "succulent.jpeg",
+              image_title: "succulent plant"
             },{
               image_src: "ombreleaves.jpeg",
               image_title: "stack of leaves"
@@ -71,7 +39,39 @@ export default React.createClass({
           ]
         },
         {
-          album_name: "five",
+          album_name: "Sky",
+          id: 2,
+          images: [
+            {
+              image_src: "oceanclouds.jpeg",
+              image_title: "clouds hovering over ocean"
+            },{
+              image_src: "greenstars.jpeg",
+              image_title: "green stars"
+            },{
+              image_src: "mountain.jpeg",
+              image_title: "mountain"
+            }
+          ]
+        },
+        {
+          album_name: "Water",
+          id: 3,
+          images: [
+            {
+              image_src: "oceancliffs.jpeg",
+              image_title: "cliffs near ocean"
+            },{
+              image_src: "whitewater.jpeg",
+              image_title: "white water on river"
+            },{
+              image_src: "hills.jpeg",
+              image_title: "hills"
+            }
+          ]
+        },
+        {
+          album_name: "Trees",
           id: 4,
           images: [
             {
@@ -81,24 +81,24 @@ export default React.createClass({
               image_src: "snowtrees.jpeg",
               image_title: "snowy pine trees at night"
             },{
-              image_src: "strawberries.jpeg",
-              image_title: "strawberries"
+              image_src: "trees.jpeg",
+              image_title: "trees"
             }
           ]
         },
         {
-          album_name: "six",
+          album_name: "Misc",
           id: 5,
           images: [
             {
-              image_src: "succulent.jpeg",
-              image_title: "succulent plant"
+              image_src: "books.jpeg",
+              image_title: "books"
             },{
-              image_src: "trees.jpeg",
-              image_title: "trees"
+              image_src: "strawberries.jpeg",
+              image_title: "strawberries"
             },{
-              image_src: "whitewater.jpeg",
-              image_title: "white water on river"
+              image_src: "jellyfish.jpeg",
+              image_title: "jellyfish"
             }
           ]
         }
@@ -113,7 +113,6 @@ export default React.createClass({
     )
   },
   onHandleClickChangeAlbum(e) {
-    console.log("handling", e.target)
     this.setState(
       {
         currentAlbum: this.props.albums[e.target.id]
@@ -128,7 +127,7 @@ export default React.createClass({
         <section className="albums__links--list">
           {this.props.albums.map(function(album, i){
             return <h2 key={i}  className="albums__links">
-              <Link  id={album.id} onClick={this.onHandleClickChangeAlbum} to={`/albums/${album.album_name}`}>{album.album_name}
+              <Link className="link" id={album.id} onClick={this.onHandleClickChangeAlbum} to={`/albums/${album.album_name}`}>{album.album_name}
               </Link>
             </h2>
           },this)}

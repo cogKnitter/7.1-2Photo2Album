@@ -8,17 +8,18 @@
     "test": "jest"
   },
   "dependencies": {
+    "font-awesome": "^4.6.3",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.0"
   },
-   "jest": {
-     "unmockedModulePathPatterns": [
-       "/node_modules/react",
-       "/node_modules/react-dom",
-       "/node_modules/react-addons-test-utils"
-     ]
-   },
+  "jest": {
+    "unmockedModulePathPatterns": [
+      "/node_modules/react",
+      "/node_modules/react-dom",
+      "/node_modules/react-addons-test-utils"
+    ]
+  },
   "devDependencies": {
     "babel-core": "^6.5.1",
     "babel-loader": "^6.2.2",
